@@ -1,0 +1,619 @@
+{
+  "picture": {
+    "hidden": false,
+    "url": "",
+    "size": 64,
+    "rotation": 0,
+    "aspectRatio": 1,
+    "borderRadius": 100,
+    "borderColor": "rgba(0, 0, 0, 0)",
+    "borderWidth": 0,
+    "shadowColor": "rgba(0, 0, 0, 0.5)",
+    "shadowWidth": 0
+  },
+  "basics": {
+    "name": "Amélie Yang",
+    "headline": "Étudiante ingénieure en Data & Systèmes d’Information - IMT Mines Albi",
+    "email": "amelie.yang@mines-albi.fr",
+    "phone": "+33 7 67 95 35 99",
+    "location": "Grenoble, France",
+    "website": {
+      "url": "",
+      "label": ""
+    },
+    "customFields": []
+  },
+  "summary": {
+    "title": "Résumé",
+    "icon": "",
+    "columns": 1,
+    "hidden": false,
+    "keepTogether": false,
+    "startOnNewPage": false,
+    "content": "<p><span style=\"color: rgb(0, 0, 0);\">Ingénieure diplômée de l'IMT Mines Albi, option Génie des systèmes d'information. En recherche d'un poste d'ingénieure en intelligence artificielle à partir de septembre 2026.</span></p>"
+  },
+  "sections": {
+    "profiles": {
+      "title": "Profil",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": [
+        {
+          "id": "jz9w0nc74auhcv7cpspfos12",
+          "hidden": false,
+          "icon": "linkedin",
+          "iconColor": "",
+          "network": "Linkedin",
+          "username": "Amélie Yang",
+          "website": {
+            "url": "https://www.linkedin.com/in/amelieyang",
+            "label": "",
+            "inlineLink": false
+          }
+        }
+      ]
+    },
+    "experience": {
+      "title": "Expérience",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": [
+        {
+          "id": "019e65fd-e3b1-71e2-8174-90adddfee35e",
+          "hidden": false,
+          "company": "ALTEN Lab",
+          "position": "Stagiaire Ingénieure IA Générative",
+          "location": "Grenoble, France",
+          "period": "Février 2026 - Août 2026",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<ul><li>Cycle complet du projet (état de l'art, recueil du besoin métier, traitement des données, mise en production) d'une solution RAG multimodale pour la recherche documentaire industrielle, conçue pour être adaptable à différents métiers.</li><li>Benchmark d'outils d'extraction PDF (Docling, PyMuPDF, OCR, VLM), pipeline d'ingestion (chunking, embeddings, pgvector) et deux moteurs RAG complémentaires (frameworkless, LangChain/LangGraph).</li><li>Évaluation complète (RAGAS, recall@k), API FastAPI conteneurisée (Docker), CI/CD, déploiement en production sur Open WebUI.</li></ul>",
+          "roles": []
+        },
+        {
+          "id": "q3dh40u9cuvfy5eqh0zz0uxz",
+          "hidden": false,
+          "company": "Yooz",
+          "position": "Stagiaire Assistante Ingénieure R&D",
+          "location": "Aimargues, France",
+          "period": "Avril 2025 - Août 2025",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<ul><li>Application web (Dash) de visualisation et d'expérimentation de solutions IA (recherche sémantique, RAG, LLM) pour la gestion comptable.</li><li>Clustering et réduction de dimension (PCA, t-SNE, UMAP) de l'espace vectoriel pour améliorer la recherche sémantique et l'aide à la décision.</li><li>Agents « comptable » connectés à un RAG indexé sur le Plan Comptable Général, exposés via un serveur MCP. (Sentence Transformers, LlamaIndex, Milvus, ChromaDB)</li></ul>",
+          "roles": []
+        },
+        {
+          "id": "htiyeypuvjw99a5kk4clvp69",
+          "hidden": false,
+          "company": "Laboratoires Pierre Fabre",
+          "position": "Stagiaire Opératrice",
+          "location": "Soual, France",
+          "period": "Février 2024 - Mars 2024",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<p>Renforcement des compétences opérationnelles en gérant la ligne de conditionnement, surveillance, tri et alimentation des processus.</p>",
+          "roles": []
+        },
+        {
+          "id": "o0few6u6o6un3ynwkygjtdzv",
+          "hidden": true,
+          "company": "CERECO",
+          "position": "Stagiaire en laboratoire agroalimentaire",
+          "location": "Garons, France",
+          "period": "Décembre 2020",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<p>Développement de compétences en laboratoire sur l’échantillonnage alimentaire.</p><p>Analyse du pH, de l’humidité et des lipides.</p><p>Suivi de protocole en anglais.</p>",
+          "roles": []
+        }
+      ]
+    },
+    "education": {
+      "title": "Formation",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": [
+        {
+          "id": "qzptduqm5i2w8dgknwbfmeb6",
+          "hidden": false,
+          "school": "The Catholic University of Korea",
+          "degree": "Séoul, Corée du Sud",
+          "area": "AI Major - Exchange Student",
+          "grade": "",
+          "location": "",
+          "period": "Septembre 2025 - Décembre 2025",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<p>Computer Vision, Data Mining, Machine Learning.</p>"
+        },
+        {
+          "id": "lq1cxog4z86nuaf6d07s8k2d",
+          "hidden": false,
+          "school": "IMT Mines Albi",
+          "degree": "Albi, France",
+          "area": "Ingénieur Généraliste",
+          "grade": "",
+          "location": "",
+          "period": "2023 - 2026",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<p>Optimisation, Base de données, Calcul numérique, Big Data, Machine Learning.</p>"
+        },
+        {
+          "id": "gmxlelq9g7v0dum88vyyyi2h",
+          "hidden": false,
+          "school": "Lycée Joffre",
+          "degree": "Montpellier, France",
+          "area": "Classe préparatoire MPSI-MP",
+          "grade": "",
+          "location": "",
+          "period": "2021 - 2023",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": ""
+        },
+        {
+          "id": "q5img8f4b0mlm1qpqli178zr",
+          "hidden": true,
+          "school": "Lycée Hemingway",
+          "degree": "Baccalauréat",
+          "area": "",
+          "grade": "",
+          "location": "",
+          "period": "2018 - 2021",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": ""
+        }
+      ]
+    },
+    "projects": {
+      "title": "Projets",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": [
+        {
+          "id": "o0btuh0qo2pzuavxf4hp93dj",
+          "hidden": true,
+          "name": "TIPE – Création d’un jeu de société type Dobble",
+          "period": "2022",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<p>Étude mathématique et analogie avec la géométrie projective.</p><p>Développement d’un programme Python générant un jeu basé sur le corps F9.</p>"
+        },
+        {
+          "id": "tlmg8hfyw1f9kvj0fi0jkaa0",
+          "hidden": true,
+          "name": "Base de données d'un réseau social",
+          "period": "2023",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<p>Création d’un MCD, MRD et diagramme de dépendance. Implémentation SQL du schéma et requêtes d’interaction.</p>"
+        },
+        {
+          "id": "dlbwscl272pbigf8xlelk3jw",
+          "hidden": false,
+          "name": "Prévision en temps réel du temps d'attente à quai de la SNCF",
+          "period": "2025",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<p>Nettoyage, traitement et agrégation des données de flux. Entraînement de modèles de régression et de séries temporelles en Python.</p>"
+        },
+        {
+          "id": "pulijxcnrxdo49mt1okp5u24",
+          "hidden": false,
+          "name": "CNN pour la reconnaissance de chiffres manuscrits",
+          "period": "2024",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<p>Développement d'un réseau de neurones convolutif (CNN) pour la classification d'images (Dataset MNIST) avec PyTorch : couches de convolution/pooling, fonctions d'activation, rétropropagation, optimisation (Adam) et régularisation (dropout).</p>"
+        },
+        {
+          "id": "qyjtb4xotdulnflnsck8jkff",
+          "hidden": true,
+          "name": "Thermométrie par photoluminescence dans le domaine cryogénique",
+          "period": "2024",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<p>Recherche bibliographique, plan expérimental, rapport et poster scientifique sur l’étude de luminophores pour la mesure de température à très basse température.</p>"
+        }
+      ]
+    },
+    "skills": {
+      "title": "Compétences",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": [
+        {
+          "id": "a2rlwmqacg4299ofechcd4mo",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Languages",
+          "proficiency": "Python (NumPy, Pandas, Scikit-learn, TensorFlow/PyTorch), R, SQL, C++, Matlab",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "k99esk5t4uijrq7pgx3rc5i6",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Outils",
+          "proficiency": "Git, Docker, FastAPI",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "u75prn8jcoqyat4cc2cisi4j",
+          "hidden": true,
+          "icon": "",
+          "iconColor": "",
+          "name": "Data Engineering",
+          "proficiency": "Big Data, Data Cleaning, Feature Engineering",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "fm93vrtv05umd9yg4cma7878",
+          "hidden": true,
+          "icon": "",
+          "iconColor": "",
+          "name": "Visualisation",
+          "proficiency": "Matplotlib, Seaborn, Plotly",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "e0h0n7dy9dmapf8wpcfmz9v9",
+          "hidden": true,
+          "icon": "",
+          "iconColor": "",
+          "name": "Machine Learning",
+          "proficiency": "Régression, séries temporelles, classification, clustering",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "lqgjzpzsm0p750a8jpo8vcal",
+          "hidden": true,
+          "icon": "",
+          "iconColor": "",
+          "name": "Deep Learning",
+          "proficiency": "CNN, MLP",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "d268zbivg5vl6pdijo6yamw2",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "NLP / LLM",
+          "proficiency": "RAG, embeddings, LlamaIndex, Langchain, Langgraph",
+          "level": 0,
+          "keywords": []
+        },
+        {
+          "id": "019e9976-b8cf-7698-b3de-f2e145a32da8",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Deep/Machine Learning",
+          "proficiency": "CNN, MLP, régression, séries temporelles, classification, clustering, ",
+          "level": 0,
+          "keywords": []
+        }
+      ]
+    },
+    "languages": {
+      "title": "Langues",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": [
+        {
+          "id": "doe44h2df35ykbg5ej5rj0wr",
+          "hidden": false,
+          "language": "Anglais (TOEIC 965 pts), Espagnol, Japonais",
+          "fluency": "",
+          "level": 0
+        }
+      ]
+    },
+    "interests": {
+      "title": "Intérêts",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": [
+        {
+          "id": "d65rq1jy7000yb3cop1w5ood",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Volley (2 ans en compétition)",
+          "keywords": []
+        },
+        {
+          "id": "h06nyibmjesdkpfd9wgni0wn",
+          "hidden": true,
+          "icon": "",
+          "iconColor": "",
+          "name": "Danse moderne (5 ans)",
+          "keywords": []
+        },
+        {
+          "id": "llshon29oxcq2w3nyrfg6hpu",
+          "hidden": false,
+          "icon": "",
+          "iconColor": "",
+          "name": "Musique (piano, guitare)",
+          "keywords": []
+        },
+        {
+          "id": "ixt6l6lwv2ag9roy3wu7rhnq",
+          "hidden": true,
+          "icon": "",
+          "iconColor": "",
+          "name": "Jeux-vidéos",
+          "keywords": []
+        }
+      ]
+    },
+    "awards": {
+      "title": "Awards",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": []
+    },
+    "certifications": {
+      "title": "Certifications",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": [
+        {
+          "id": "w3pdng7xffx4txcypzmewkxd",
+          "hidden": true,
+          "title": "PSC1 - Certificat de Compétence de Citoyen de Sécurité Civile",
+          "issuer": "",
+          "date": "2020",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": ""
+        },
+        {
+          "id": "i3vxyzvxjvu7e4d1g5ijdcgn",
+          "hidden": false,
+          "title": "MOOC - Prévention des risques professionnels (INRS)",
+          "issuer": "",
+          "date": "2023",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": ""
+        },
+        {
+          "id": "l9i53wf68yuyqfwzfc0ctw6s",
+          "hidden": false,
+          "title": "MOOC - Propriété Intellectuelle (INPI)",
+          "issuer": "",
+          "date": "2024",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": ""
+        }
+      ]
+    },
+    "publications": {
+      "title": "Publications",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": []
+    },
+    "volunteer": {
+      "title": "Associatif",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": [
+        {
+          "id": "a1ciawgky28xc5hfdj0e8era",
+          "hidden": false,
+          "organization": "Secrétaire Générale du Bureau des Sports IMT Mines Albi",
+          "location": "",
+          "period": " 2024 - 2025",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<p>Organisation de plannings et d’événements. Rédaction de dossiers, comptes-rendus.</p>"
+        },
+        {
+          "id": "n3vkopihx57vswaueza62zwn",
+          "hidden": false,
+          "organization": "Les Cordées de la Réussite",
+          "location": "",
+          "period": " 2023 - 2024",
+          "website": {
+            "url": "",
+            "label": "",
+            "inlineLink": false
+          },
+          "description": "<p>Encadrement et accompagnement d’élèves dans leur orientation.</p>"
+        }
+      ]
+    },
+    "references": {
+      "title": "References",
+      "icon": "",
+      "columns": 1,
+      "hidden": false,
+      "keepTogether": false,
+      "startOnNewPage": false,
+      "items": []
+    }
+  },
+  "customSections": [],
+  "metadata": {
+    "template": "chikorita",
+    "layout": {
+      "sidebarWidth": 35,
+      "pages": [
+        {
+          "fullWidth": false,
+          "main": [
+            "summary",
+            "experience",
+            "education",
+            "projects",
+            "references"
+          ],
+          "sidebar": [
+            "profiles",
+            "skills",
+            "languages",
+            "volunteer",
+            "certifications",
+            "interests",
+            "awards",
+            "publications"
+          ]
+        }
+      ]
+    },
+    "page": {
+      "gapX": 4,
+      "gapY": 6,
+      "marginX": 18,
+      "marginY": 18,
+      "format": "a4",
+      "locale": "en-US",
+      "hideLinkUnderline": false,
+      "hideIcons": false,
+      "hideSectionIcons": true
+    },
+    "design": {
+      "level": {
+        "icon": "star",
+        "type": "circle"
+      },
+      "colors": {
+        "primary": "rgba(30, 64, 149, 1)",
+        "text": "rgba(0, 0, 0, 1)",
+        "background": "rgba(255, 255, 255, 1)"
+      }
+    },
+    "typography": {
+      "body": {
+        "fontFamily": "IBM Plex Serif",
+        "fontWeights": [
+          "400",
+          "400",
+          "600"
+        ],
+        "fontSize": 10.5,
+        "lineHeight": 1.45
+      },
+      "heading": {
+        "fontFamily": "IBM Plex Serif",
+        "fontWeights": [
+          "700"
+        ],
+        "fontSize": 15,
+        "lineHeight": 1.45
+      }
+    },
+    "notes": "",
+    "styleRules": [],
+    "stylesheet": {
+      "mode": "legacy",
+      "source": {
+        "languageVersion": 1,
+        "text": "@version 1;\n"
+      },
+      "applied": {
+        "languageVersion": 1,
+        "text": "@version 1;\n"
+      }
+    }
+  }
+}
