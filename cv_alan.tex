@@ -1,0 +1,212 @@
+\documentclass[10.5pt,a4paper]{article}
+
+% ---------- Packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{XCharter}                % elegant serif body font
+\usepackage[a4paper,margin=0.85cm]{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{ragged2e}
+\usepackage{paracol}
+\usepackage[none]{hyphenat}
+\setlength{\emergencystretch}{3em}
+
+% ---------- Colors ----------
+\definecolor{accent}{RGB}{30,64,149}
+\definecolor{graytext}{RGB}{90,90,90}
+
+% ---------- Links ----------
+\hypersetup{
+  colorlinks=true,
+  linkcolor=accent,
+  urlcolor=accent
+}
+
+% ---------- Section titles (main column) ----------
+\titleformat{\section}
+  {\color{accent}\bfseries\Large}
+  {}{0em}{}
+\titlespacing{\section}{0pt}{4pt}{2pt}
+\newcommand{\sectionrule}{\vspace{-6pt}{\color{accent}\hrule height 1pt}\vspace{3pt}}
+
+% ---------- Sidebar section titles ----------
+\newcommand{\subsectitle}[1]{%
+  {\color{accent}\bfseries\large #1}\\[-2pt]
+  {\color{accent}\hrule height 0.8pt}\vspace{4pt}
+}
+
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+% ---------- Custom commands ----------
+
+% Experience / generic entry: #1 position #2 org #3 location #4 period #5 body
+\newcommand{\cvexp}[5]{%
+  \noindent\textbf{#1} \hfill {\itshape\color{graytext}\small #4}\\
+  {\itshape #2 --- #3}\\[-6pt]
+  #5
+  \vspace{9pt}
+}
+
+% Education entry: #1 school #2 area/degree #3 location #4 period #5 description
+\newcommand{\cvedu}[5]{%
+  \noindent\textbf{#1} \hfill {\itshape\color{graytext}\small #4}\\
+  {\itshape #2, #3}\\[1pt]
+  {\small #5}
+  \vspace{2pt}
+}
+
+% Education entry without description
+\newcommand{\cveduplain}[4]{%
+  \noindent\textbf{#1} \hfill {\itshape\color{graytext}\small #4}\\
+  {\itshape #2, #3}
+  \vspace{2pt}
+}
+
+% Project entry: #1 name #2 period #3 description
+\newcommand{\cvproject}[3]{%
+  \noindent\textbf{#1} \hfill {\itshape\color{graytext}\small #2}\\[1pt]
+  {\small #3}
+  \vspace{3pt}
+}
+
+% Sidebar simple line entry: #1 title (bold) #2 detail
+\newcommand{\sidebarline}[2]{%
+  \noindent\textbf{\small #1}\\
+  {\small #2}\\[3pt]
+}
+
+% Sidebar dated entry (volunteer, with description)
+\newcommand{\sidebardated}[3]{%
+  \textbf{\small #1} {\itshape\color{graytext}\footnotesize (#2)}\\
+  {\small #3}\\[3pt]
+}
+
+% Sidebar dated entry without description (certifications)
+\newcommand{\sidebarcert}[2]{%
+  \noindent\textbf{\small #1} {\itshape\color{graytext}\footnotesize (#2)}\\[2pt]
+}
+
+\begin{document}
+
+% ================= HEADER =================
+\begin{center}
+  {\fontsize{26}{30}\selectfont\bfseries Amélie Yang}\\[4pt]
+  {\color{accent}\itshape\large Engineering Student in Generative AI \& Backend Development -- IMT Mines Albi}\\[6pt]
+  {\small
+    Grenoble, France
+    \,\textbullet\,
+    \href{mailto:amelie.yang@mines-albi.fr}{amelie.yang@mines-albi.fr}
+    \,\textbullet\,
+    +33~7~67~95~35~99
+    \,\textbullet\,
+    \href{https://www.linkedin.com/in/amelieyang}{linkedin.com/in/amelieyang}
+  }
+\end{center}
+
+\vspace{3pt}
+{\color{accent}\hrule height 1.2pt}
+\vspace{4pt}
+
+% ================= TWO COLUMN BODY =================
+\columnratio{0.65}
+\setlength{\columnsep}{1.5em}
+\begin{paracol}{2}
+
+% ---------- SUMMARY ----------
+\section*{Summary}
+\sectionrule
+\justifying
+Engineering graduate from IMT Mines Albi (Data \& Information Systems), with hands-on experience building production-grade generative AI services: backend APIs (FastAPI), RAG pipelines, LLM orchestration and AI agents. Strong interest in healthcare and prevention. Looking for a software/AI engineering position starting September 2026.
+
+% ---------- EXPERIENCE ----------
+\section*{Experience}
+\sectionrule
+
+\cvexp{Generative AI Engineering Intern}{ALTEN Lab}{Grenoble, France}{February 2026 -- August 2026 (6 months)}{%
+  \begin{itemize}[leftmargin=12pt, itemsep=2pt, topsep=0pt, partopsep=0pt, parsep=0pt]
+    \item Designed and built a multimodal RAG service \emph{as-a-service} for industrial document search: containerized FastAPI backend API (Docker), built as a reusable abstraction adaptable to different business domains.
+    \item LLM orchestration, two complementary RAG engines (frameworkless, LangChain/\allowbreak LangGraph); ingestion pipeline (chunking, embeddings), hybrid BM25/\allowbreak semantic search (RRF fusion, PostgreSQL: pgvector + ParadeDB).
+    \item Code quality: benchmarked extraction tools (Docling, PyMuPDF, OCR, VLM), testing, evaluation against academic benchmarks (RAGAS, recall@k, MRR, bootstrap), CI/CD, production deployment on Open WebUI.
+  \end{itemize}
+}
+
+\cvexp{R\&D Engineering Assistant Intern}{Yooz}{Aimargues, France}{April 2025 -- August 2025 (4 months)}{%
+  \begin{itemize}[leftmargin=12pt, itemsep=2pt, topsep=0pt, partopsep=0pt, parsep=0pt]
+    \item Built "accountant" AI agents connected to a RAG system indexed on the French General Chart of Accounts, designed for easy integration by third-party clients.
+    \item Developed a web application (Dash) for visualizing and experimenting with AI solutions (semantic search, RAG, LLM), designed to be usable by non-technical business users.
+    \item Clustering and dimensionality reduction (PCA, t-SNE, UMAP) on vector databases (Milvus, ChromaDB) to diagnose and improve semantic search quality in production.
+  \end{itemize}
+}
+
+\cvexp{Production Operator Intern}{Laboratoires Pierre Fabre}{Soual, France}{February 2024 -- March 2024 (2 months)}{%
+  \begin{itemize}[leftmargin=12pt, itemsep=2pt, topsep=0pt, partopsep=0pt, parsep=0pt]
+    \item Strengthened operational skills by managing the packaging line: monitoring, sorting, and feeding processes.
+  \end{itemize}
+}
+
+% ---------- EDUCATION ----------
+\section*{Education}
+\sectionrule
+
+\cvedu{The Catholic University of Korea}{AI Major -- Exchange Student}{Seoul, South Korea}{September 2025 -- December 2025}{Computer Vision, Data Mining, Machine Learning.}
+
+\cvedu{IMT Mines Albi}{General Engineering Degree}{Albi, France}{2023 -- 2026}{Optimization, Databases, Numerical Computing, Big Data, Machine Learning.}
+
+\cveduplain{Lycée Joffre}{Preparatory classes MPSI-MP}{Montpellier, France}{2021 -- 2023}
+
+% ---------- PROJECTS ----------
+\section*{Projects}
+\sectionrule
+
+\cvproject{Handwritten Digit Recognition CNN}{2024}{Built a convolutional neural network (CNN) for image classification (MNIST dataset) with PyTorch: convolution/\allowbreak pooling layers, activation functions, backpropagation, optimization (Adam), and regularization (dropout).}
+
+\cvproject{Real-Time Platform Waiting-Time Forecasting for SNCF}{2025}{Cleaning, processing, and aggregation of flow data. Trained regression and time-series models in Python.}
+
+\switchcolumn
+
+\vspace{2pt}
+
+% ---------- SKILLS ----------
+\subsectitle{Skills}
+
+\sidebarline{Programming Languages}{Python (FastAPI, Pandas, NumPy, Scikit-learn, PyTorch), SQL, C++}
+\sidebarline{Generative AI / LLM}{RAG (as-a-service), LLM orchestration, AI agents, LangChain, LangGraph, LlamaIndex, embeddings}
+\sidebarline{Backend \& Infrastructure}{FastAPI, integration architectures, Docker, CI/CD, Git}
+\sidebarline{Databases}{SQL, BM25 (ParadeDB), vector databases (pgvector, Milvus, ChromaDB)}
+\sidebarline{Machine Learning}{Classification, clustering, dimensionality reduction, CNN, time series}
+
+% ---------- LANGUAGES ----------
+\subsectitle{Languages}
+\noindent{\small French (native), English (TOEIC 965 pts), Spanish, Japanese}
+
+\vspace{5pt}
+
+% ---------- VOLUNTEERING ----------
+\subsectitle{Volunteering}
+
+\sidebardated{General Secretary -- Sports Office, IMT Mines Albi}{2024 -- 2025}{Organized schedules and events. Wrote reports and documentation.}
+
+\sidebardated{Les Cordées de la Réussite}{2023 -- 2024}{Mentored and guided students in their academic and career orientation.}
+
+% ---------- CERTIFICATIONS ----------
+\subsectitle{Certifications}
+
+\sidebarcert{MOOC -- Occupational Risk Prevention (INRS)}{2023}
+\sidebarcert{MOOC -- Intellectual Property (INPI)}{2024}
+
+\vspace{4pt}
+
+% ---------- INTERESTS ----------
+\subsectitle{Interests}
+\noindent{\small Volleyball (2 years competitive)}\\
+{\small Music (piano, guitar)}\\
+{\small Video games}
+
+\end{paracol}
+
+\end{document}
