@@ -1,0 +1,209 @@
+\documentclass[10.5pt,a4paper]{article}
+
+% ---------- Packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{XCharter}                % elegant serif body font
+\usepackage[a4paper,margin=1cm]{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{ragged2e}
+\usepackage{paracol}
+\usepackage[none]{hyphenat}
+\setlength{\emergencystretch}{3em}
+
+% ---------- Colors ----------
+\definecolor{accent}{RGB}{30,64,149}
+\definecolor{graytext}{RGB}{90,90,90}
+
+% ---------- Links ----------
+\hypersetup{
+  colorlinks=true,
+  linkcolor=accent,
+  urlcolor=accent
+}
+
+% ---------- Section titles (main column) ----------
+\titleformat{\section}
+  {\color{accent}\bfseries\Large}
+  {}{0em}{}
+\titlespacing{\section}{0pt}{4pt}{2pt}
+\newcommand{\sectionrule}{\vspace{-6pt}{\color{accent}\hrule height 1pt}\vspace{7pt}}
+
+% ---------- Sidebar section titles ----------
+\newcommand{\subsectitle}[1]{%
+  {\color{accent}\bfseries\large #1}\\[-2pt]
+  {\color{accent}\hrule height 0.8pt}\vspace{7pt}
+}
+
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+% ---------- Custom commands ----------
+
+% Experience / generic entry: #1 position #2 org #3 location #4 period #5 body
+\newcommand{\cvexp}[5]{%
+  \noindent\textbf{#1} \hfill {\itshape\color{graytext}\small #4}\\
+  {\itshape #2 --- #3}\\[-2pt]
+  #5
+  \vspace{9pt}
+}
+
+% Education entry: #1 school #2 area/degree #3 location #4 period #5 description
+\newcommand{\cvedu}[5]{%
+  \noindent\textbf{#1} \hfill {\itshape\color{graytext}\small #4}\\
+  {\itshape #2, #3}\\[1pt]
+  {\small #5}
+  \vspace{6pt}
+}
+
+% Education entry without description
+\newcommand{\cveduplain}[4]{%
+  \noindent\textbf{#1} \hfill {\itshape\color{graytext}\small #4}\\
+  {\itshape #2, #3}
+  \vspace{6pt}
+}
+
+% Project entry: #1 name #2 period #3 description
+\newcommand{\cvproject}[3]{%
+  \noindent\textbf{#1} \hfill {\itshape\color{graytext}\small #2}\\[1pt]
+  {\small #3}
+  \vspace{5pt}
+}
+
+% Sidebar simple line entry: #1 title (bold) #2 detail
+\newcommand{\sidebarline}[2]{%
+  \noindent\textbf{\small #1}\\
+  {\small #2}\\[3pt]
+}
+
+% Sidebar dated entry (volunteer, with description)
+\newcommand{\sidebardated}[3]{%
+  \textbf{\small #1} {\itshape\color{graytext}\footnotesize (#2)}\\
+  {\small #3}\\[3pt]
+}
+
+% Sidebar dated entry without description (certifications)
+\newcommand{\sidebarcert}[2]{%
+  \noindent\textbf{\small #1} {\itshape\color{graytext}\footnotesize (#2)}\\[2pt]
+}
+
+\begin{document}
+
+% ================= HEADER =================
+\begin{center}
+  {\fontsize{26}{30}\selectfont\bfseries Amélie Yang}\\[4pt]
+  {\color{accent}\itshape\large Engineering Student in Data \& Information Systems -- IMT Mines Albi}\\[6pt]
+  {\small
+    Grenoble, France
+    \,\textbullet\,
+    \href{mailto:amelie.yang@mines-albi.fr}{amelie.yang@mines-albi.fr}
+    \,\textbullet\,
+    +33~7~67~95~35~99
+    \,\textbullet\,
+    \href{https://www.linkedin.com/in/amelieyang}{linkedin.com/in/amelieyang}
+  }
+\end{center}
+
+\vspace{3pt}
+{\color{accent}\hrule height 1.2pt}
+\vspace{4pt}
+
+% ================= TWO COLUMN BODY =================
+\columnratio{0.65}
+\setlength{\columnsep}{1.5em}
+\begin{paracol}{2}
+
+% ---------- SUMMARY ----------
+\section*{Summary}
+\sectionrule
+\justifying
+Engineering graduate from IMT Mines Albi (Data \& Information Systems), with hands-on experience taking AI-powered products from research to production (Python, Docker, CI/CD). Comfortable integrating LLM tools directly into the development workflow to move faster without compromising code quality. Fluent in English (TOEIC 965/990, C1). Available from September 2026.
+
+% ---------- EXPERIENCE ----------
+\section*{Experience}
+\sectionrule
+
+\cvexp{AI Engineering Intern}{ALTEN Lab}{Grenoble, France}{Feb 2026 -- Aug 2026 (6 months)}{%
+  \begin{itemize}[leftmargin=12pt, itemsep=2pt, topsep=0pt, partopsep=0pt, parsep=0pt]
+    \item Owned the full lifecycle of an AI-powered document search product for industry, from research to production deployment.
+    \item Benchmarked PDF extraction tools (Docling, PyMuPDF, OCR, VLM) and built two complementary RAG engines (frameworkless, LangChain/\allowbreak LangGraph).
+    \item Shipped a robust, reproducible system integrating LLM tools (Anthropic, OpenAI, Mistral): quantified evaluation (RAGAS, recall@k), containerized FastAPI, CI/CD, deployed to production.
+  \end{itemize}
+}
+
+\cvexp{R\&D Engineering Assistant Intern}{Yooz}{Aimargues, France}{Apr 2025 -- Aug 2025 (4 months)}{%
+  \begin{itemize}[leftmargin=12pt, itemsep=2pt, topsep=0pt, partopsep=0pt, parsep=0pt]
+    \item Built and compared multiple ML approaches (Random Forest, XGBoost, RAG, pure LLM) on real, unlabeled, noisy data.
+    \item Designed a Dash web app to visualize and audit embeddings (PCA, t-SNE, UMAP), diagnosing failure modes of a production semantic search system.
+    \item Shipped a RAG system indexed on a domain-specific knowledge base, reaching 81\% match accuracy vs.\ 64\% for a pure-LLM baseline -- a comparative study that directly informed the product decision.
+  \end{itemize}
+}
+
+\cvexp{Production Operator Intern}{Laboratoires Pierre Fabre}{Soual, France}{Feb 2024 -- Mar 2024 (2 months)}{%
+  \begin{itemize}[leftmargin=12pt, itemsep=2pt, topsep=0pt, partopsep=0pt, parsep=0pt]
+    \item Strengthened operational skills managing a packaging line: monitoring, sorting, and feeding the process.
+  \end{itemize}
+}
+
+% ---------- EDUCATION ----------
+\section*{Education}
+\sectionrule
+
+\cvedu{The Catholic University of Korea}{AI Major -- Exchange Student}{Seoul, South Korea}{Sep 2025 -- Dec 2025}{Computer Vision, Data Mining, Machine Learning.}
+
+\cvedu{IMT Mines Albi}{Engineering Degree, Data \& Information Systems}{Albi, France}{2023 -- 2026}{Optimization, Databases, Numerical Computing, Big Data, Machine Learning.}
+
+\cvedu{Lycée Joffre}{Intensive Preparatory Program, Mathematics \& Physics (MPSI-MP)}{Montpellier, France}{2021 -- 2023}{Strong focus on applied mathematics, physics, and algorithmics.}
+
+% ---------- PROJECTS ----------
+\section*{Projects}
+\sectionrule
+
+\cvproject{Real-Time Platform Waiting-Time Prediction for SNCF (French Railways)}{2025}{Cleaned, processed, and aggregated real-time flow data. Trained and evaluated regression and time-series models in Python.}
+
+\switchcolumn
+
+\vspace{-1pt}
+
+% ---------- SKILLS ----------
+\subsectitle{Skills}
+
+\sidebarline{Programming}{Python (NumPy, Pandas, Scikit-learn, TensorFlow/\allowbreak PyTorch), C++, SQL, R, Matlab}
+\sidebarline{Backend \& DevOps}{FastAPI, Docker, CI/CD, Git}
+\sidebarline{AI Tooling}{LLM-assisted development (Anthropic, OpenAI, Mistral), RAG, LangChain/\allowbreak LangGraph}
+\sidebarline{Machine Learning}{Regression, time series, classification, clustering, CNN, MLP}
+
+% ---------- LANGUAGES ----------
+\subsectitle{Languages}
+\noindent{\small English (C1, TOEIC 965/990), Spanish, Japanese}
+
+\vspace{5pt}
+
+% ---------- VOLUNTEERING ----------
+\subsectitle{Volunteering}
+
+\sidebardated{Secretary General -- Sports Office, IMT Mines Albi}{2024 -- 2025}{Organized schedules and events. Wrote reports and meeting minutes.}
+
+\sidebardated{Les Cordées de la Réussite (mentoring program)}{2023 -- 2024}{Mentored and guided high-school students in their academic orientation.}
+
+% ---------- CERTIFICATIONS ----------
+\subsectitle{Certifications}
+
+\sidebarcert{MOOC -- Occupational Risk Prevention (INRS)}{2023}
+\sidebarcert{MOOC -- Intellectual Property (INPI)}{2024}
+
+\vspace{4pt}
+
+% ---------- INTERESTS ----------
+\subsectitle{Interests}
+\noindent{\small Volleyball (2 years, competitive)}\\
+{\small Music (piano, guitar)}\\
+{\small Video games}
+
+\end{paracol}
+
+\end{document}

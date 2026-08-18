@@ -1,0 +1,211 @@
+\documentclass[10.5pt,a4paper]{article}
+
+% ---------- Packages ----------
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage{XCharter}                % elegant serif body font
+\usepackage[a4paper,margin=1.15cm]{geometry}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{ragged2e}
+\usepackage{paracol}
+\usepackage[none]{hyphenat}
+\setlength{\emergencystretch}{3em}
+
+% ---------- Colors ----------
+\definecolor{accent}{RGB}{30,64,149}
+\definecolor{graytext}{RGB}{90,90,90}
+
+% ---------- Links ----------
+\hypersetup{
+  colorlinks=true,
+  linkcolor=accent,
+  urlcolor=accent
+}
+
+% ---------- Section titles (main column) ----------
+\titleformat{\section}
+  {\color{accent}\bfseries\Large}
+  {}{0em}{}
+\titlespacing{\section}{0pt}{4pt}{2pt}
+\newcommand{\sectionrule}{\vspace{-6pt}{\color{accent}\hrule height 1pt}\vspace{2pt}}
+
+% ---------- Sidebar section titles ----------
+\newcommand{\subsectitle}[1]{%
+  {\color{accent}\bfseries\large #1}\\[-2pt]
+  {\color{accent}\hrule height 0.8pt}\vspace{4pt}
+}
+
+\setlength{\parindent}{0pt}
+\pagestyle{empty}
+
+% ---------- Custom commands ----------
+
+% Experience / generic entry: #1 position #2 org #3 location #4 period #5 body
+\newcommand{\cvexp}[5]{%
+  \noindent\textbf{#1} \hfill {\itshape\color{graytext}\small #4}\\
+  {\itshape #2 --- #3}\\[-2pt]
+  #5
+  \vspace{3pt}
+}
+
+% Education entry: #1 school #2 area/degree #3 location #4 period #5 description
+\newcommand{\cvedu}[5]{%
+  \noindent\textbf{#1} \hfill {\itshape\color{graytext}\small #4}\\
+  {\itshape #2, #3}\\[1pt]
+  {\small #5}
+  \vspace{2pt}
+}
+
+% Education entry without description
+\newcommand{\cveduplain}[4]{%
+  \noindent\textbf{#1} \hfill {\itshape\color{graytext}\small #4}\\
+  {\itshape #2, #3}
+  \vspace{2pt}
+}
+
+% Project entry: #1 name #2 period #3 description
+\newcommand{\cvproject}[3]{%
+  \noindent\textbf{#1} \hfill {\itshape\color{graytext}\small #2}\\[1pt]
+  {\small #3}
+  \vspace{2pt}
+}
+
+% Sidebar simple line entry: #1 title (bold) #2 detail
+\newcommand{\sidebarline}[2]{%
+  \noindent\textbf{\small #1}\\
+  {\small #2}\\[3pt]
+}
+
+% Sidebar dated entry (volunteer, with description)
+\newcommand{\sidebardated}[3]{%
+  \textbf{\small #1} {\itshape\color{graytext}\footnotesize (#2)}\\
+  {\small #3}\\[3pt]
+}
+
+% Sidebar dated entry without description (certifications)
+\newcommand{\sidebarcert}[2]{%
+  \noindent\textbf{\small #1} {\itshape\color{graytext}\footnotesize (#2)}\\[2pt]
+}
+
+\begin{document}
+
+% ================= HEADER =================
+\begin{center}
+  {\fontsize{26}{30}\selectfont\bfseries Amélie Yang}\\[4pt]
+  {\color{accent}\itshape\large Étudiante ingénieure en Data \& Systèmes d'Information -- IMT Mines Albi}\\[6pt]
+  {\small
+    Grenoble, France
+    \,\textbullet\,
+    \href{mailto:amelie.yang@mines-albi.fr}{amelie.yang@mines-albi.fr}
+    \,\textbullet\,
+    +33~7~67~95~35~99
+    \,\textbullet\,
+    \href{https://www.linkedin.com/in/amelieyang}{linkedin.com/in/amelieyang}
+  }
+\end{center}
+
+\vspace{3pt}
+{\color{accent}\hrule height 1.2pt}
+\vspace{4pt}
+
+% ================= TWO COLUMN BODY =================
+\columnratio{0.65}
+\setlength{\columnsep}{1.5em}
+\begin{paracol}{2}
+
+% ---------- RÉSUMÉ ----------
+\section*{Résumé}
+\sectionrule
+\justifying
+Ingénieure diplômée de l'IMT Mines Albi (Data \& Systèmes d'Information), avec une solide formation en mathématiques appliquées et une expérience en machine learning et modélisation prédictive sur données réelles bruitées. À l'aise avec les outils LLM pour accélérer la recherche et le développement. En recherche d'un poste de chercheuse / data scientist à partir de septembre 2026.
+
+% ---------- EXPÉRIENCE ----------
+\section*{Expérience}
+\sectionrule
+
+\cvexp{Stagiaire Ingénieure IA Générative}{ALTEN Lab}{Grenoble, France}{Février 2026 -- Août 2026 (6 mois)}{%
+  \begin{itemize}[leftmargin=12pt, itemsep=2pt, topsep=0pt, partopsep=0pt, parsep=0pt]
+    \item Conception et prototypage en Python d'algorithmes de recherche documentaire (RAG), avec benchmark et protocole de test reproductible (métriques quantifiées).
+    \item Utilisation experte d'outils LLM (Anthropic, OpenAI, Mistral) pour accélérer la recherche, le prototypage et l'écriture de code.
+    \item Collaboration avec les équipes métier pour le transfert d'un prototype de recherche vers une solution en production (API FastAPI conteneurisée, CI/CD).
+  \end{itemize}
+}
+
+\cvexp{Stagiaire Assistante Ingénieure R\&D}{Yooz}{Aimargues, France}{Avril 2025 -- Août 2025 (4 mois)}{%
+  \begin{itemize}[leftmargin=12pt, itemsep=2pt, topsep=0pt, partopsep=0pt, parsep=0pt]
+    \item Data science sur données réelles non annotées et bruitées (factures) : entraînement et comparaison de modèles de classification supervisée (Random Forest, XGBoost).
+    \item Conception et évaluation quantifiée d'algorithmes de recherche sémantique et de RAG pour l'automatisation d'une décision métier (81\% vs 64\% de correspondance selon l'approche).
+    \item Clustering et réduction de dimension (PCA, t-SNE, UMAP) pour analyser et diagnostiquer un espace vectoriel en production.
+  \end{itemize}
+}
+
+\cvexp{Stagiaire Opératrice}{Laboratoires Pierre Fabre}{Soual, France}{Février 2024 -- Mars 2024 (2 mois)}{%
+  \begin{itemize}[leftmargin=12pt, itemsep=2pt, topsep=0pt, partopsep=0pt, parsep=0pt]
+    \item Renforcement des compétences opérationnelles en gérant la ligne de conditionnement, surveillance, tri et alimentation des processus.
+  \end{itemize}
+}
+
+% ---------- FORMATION ----------
+\section*{Formation}
+\sectionrule
+
+\cvedu{The Catholic University of Korea}{AI Major -- Exchange Student}{Séoul, Corée du Sud}{Septembre 2025 -- Décembre 2025}{Computer Vision, Data Mining, Machine Learning.}
+
+\cvedu{IMT Mines Albi}{Ingénieur Généraliste}{Albi, France}{2023 -- 2026}{Optimisation, Base de données, Calcul numérique, Big Data, Machine Learning.}
+
+\cvedu{Lycée Joffre}{Classe préparatoire MPSI-MP}{Montpellier, France}{2021 -- 2023}{Mathématiques appliquées, physique, algorithmique.}
+
+% ---------- PROJETS ----------
+\section*{Projets}
+\sectionrule
+
+\cvproject{Prévision en temps réel du temps d'attente à quai de la SNCF}{2025}{Nettoyage, traitement et agrégation de données de flux bruitées et variables. Entraînement et évaluation de modèles de régression et de séries temporelles en Python pour la prédiction en temps réel.}
+
+\cvproject{CNN pour la reconnaissance de chiffres manuscrits}{2024}{Développement d'un CNN pour la classification d'images (Dataset MNIST) avec PyTorch : convolution, pooling, rétropropagation et optimisation (Adam).}
+
+\switchcolumn
+
+\vspace{2pt}
+
+% ---------- COMPÉTENCES ----------
+\subsectitle{Compétences}
+
+\sidebarline{Mathématiques \& Algorithmique}{Mathématiques appliquées, optimisation, calcul numérique}
+\sidebarline{Languages}{Python (NumPy, Pandas, Scikit-learn, TensorFlow/\allowbreak PyTorch), C++, R, SQL, Matlab}
+\sidebarline{Machine Learning}{Régression, séries temporelles, classification, clustering, CNN, MLP}
+\sidebarline{Outils \& LLM}{Git, Docker, FastAPI, API LLM (Anthropic, OpenAI, Mistral)}
+
+% ---------- LANGUES ----------
+\subsectitle{Langues}
+\noindent{\small Anglais (TOEIC 965 pts), Espagnol, Japonais}
+
+\vspace{5pt}
+
+% ---------- ASSOCIATIF ----------
+\subsectitle{Associatif}
+
+\sidebardated{Secrétaire Générale -- Bureau des Sports IMT Mines Albi}{2024 -- 2025}{Organisation de plannings et d'événements. Rédaction de dossiers, comptes-rendus.}
+
+\sidebardated{Les Cordées de la Réussite}{2023 -- 2024}{Encadrement et accompagnement d'élèves dans leur orientation.}
+
+% ---------- CERTIFICATIONS ----------
+\subsectitle{Certifications}
+
+\sidebarcert{MOOC -- Prévention des risques professionnels (INRS)}{2023}
+\sidebarcert{MOOC -- Propriété Intellectuelle (INPI)}{2024}
+
+\vspace{4pt}
+
+% ---------- INTÉRÊTS ----------
+\subsectitle{Intérêts}
+\noindent{\small Volley (2 ans en compétition)}\\
+{\small Musique (piano, guitare)}\\
+{\small Jeux-vidéos}
+
+\end{paracol}
+
+\end{document}
