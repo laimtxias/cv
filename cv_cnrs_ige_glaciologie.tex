@@ -5,7 +5,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
 \usepackage{XCharter}                % elegant serif body font
-\usepackage[a4paper,margin=1.1cm]{geometry}
+\usepackage[a4paper,margin=1.05cm]{geometry}
 \usepackage{xcolor}
 \usepackage{titlesec}
 \usepackage{enumitem}
@@ -30,13 +30,13 @@
 \titleformat{\section}
   {\color{accent}\bfseries\Large}
   {}{0em}{}
-\titlespacing{\section}{0pt}{6pt}{3pt}
-\newcommand{\sectionrule}{\vspace{-6pt}{\color{accent}\hrule height 1pt}\vspace{5pt}}
+\titlespacing{\section}{0pt}{4pt}{2pt}
+\newcommand{\sectionrule}{\vspace{-6pt}{\color{accent}\hrule height 1pt}\vspace{2pt}}
 
 % ---------- Sidebar section titles ----------
 \newcommand{\subsectitle}[1]{%
   {\color{accent}\bfseries\large #1}\\[-2pt]
-  {\color{accent}\hrule height 0.8pt}\vspace{5pt}
+  {\color{accent}\hrule height 0.8pt}\vspace{4pt}
 }
 
 \setlength{\parindent}{0pt}
@@ -49,7 +49,7 @@
   \noindent\textbf{#1} \hfill {\itshape\color{graytext}\small #4}\\
   {\itshape #2 --- #3}\\[-2pt]
   #5
-  \vspace{7pt}
+  \vspace{5pt}
 }
 
 % Education entry: #1 school #2 area/degree #3 location #4 period #5 description
@@ -57,21 +57,21 @@
   \noindent\textbf{#1} \hfill {\itshape\color{graytext}\small #4}\\
   {\itshape #2, #3}\\[1pt]
   {\small #5}
-  \vspace{4pt}
+  \vspace{2pt}
 }
 
 % Education entry without description
 \newcommand{\cveduplain}[4]{%
   \noindent\textbf{#1} \hfill {\itshape\color{graytext}\small #4}\\
   {\itshape #2, #3}
-  \vspace{4pt}
+  \vspace{2pt}
 }
 
 % Project entry: #1 name #2 period #3 description
 \newcommand{\cvproject}[3]{%
   \noindent\textbf{#1} \hfill {\itshape\color{graytext}\small #2}\\[1pt]
   {\small #3}
-  \vspace{3pt}
+  \vspace{2pt}
 }
 
 % Sidebar simple line entry: #1 title (bold) #2 detail
@@ -96,7 +96,7 @@
 % ================= HEADER =================
 \begin{center}
   {\fontsize{26}{30}\selectfont\bfseries Amélie Yang}\\[4pt]
-  {\color{accent}\itshape\large Étudiante ingénieure en Data \& Systèmes d'Information -- IMT Mines Albi}\\[6pt]
+  {\color{accent}\itshape\large Ingénieure Data \& Calcul Scientifique -- IMT Mines Albi}\\[6pt]
   {\small
     Grenoble, France
     \,\textbullet\,
@@ -121,7 +121,7 @@
 \section*{Résumé}
 \sectionrule
 \justifying
-Ingénieure diplômée de l'IMT Mines Albi (Data \& Systèmes d'Information), avec une expérience en machine learning, bases de données relationnelles et protocoles d'évaluation rigoureux (benchmarks, métriques quantifiées). Intérêt pour la fiabilité et l'auditabilité des systèmes d'IA. En recherche d'un poste d'ingénieure de R\&D à partir de septembre 2026.
+Ingénieure diplômée de l'IMT Mines Albi (Data \& Systèmes d'Information), issue d'une classe préparatoire scientifique (MPSI-MP), avec une expérience concrète en traitement de données et calcul numérique. En recherche d'un poste d'ingénieure data à partir de septembre 2026.
 
 % ---------- EXPÉRIENCE ----------
 \section*{Expérience}
@@ -129,17 +129,17 @@ Ingénieure diplômée de l'IMT Mines Albi (Data \& Systèmes d'Information), av
 
 \cvexp{Stagiaire Ingénieure IA Générative}{ALTEN Lab}{Grenoble, France}{Février 2026 -- Août 2026 (6 mois)}{%
   \begin{itemize}[leftmargin=12pt, itemsep=2pt, topsep=0pt, partopsep=0pt, parsep=0pt]
-    \item Conception d'un benchmark et d'un protocole de test reproductible pour l'extraction de documents PDF industriels complexes, avec métriques quantifiées (WER, CER, NED, GriTS, précision/\allowbreak rappel/\allowbreak F1).
-    \item Pipeline d'ingestion (chunking, embeddings, PostgreSQL/\allowbreak pgvector) et deux moteurs RAG complémentaires (frameworkless, LangChain/\allowbreak LangGraph).
-    \item Évaluation complète du système (RAGAS, recall@k), API FastAPI conteneurisée (Docker), CI/CD, déploiement en production.
+    \item Pipeline de traitement de données documentaires non structurées : ingestion (chunking, embeddings), indexation et recherche hybride lexicale/sémantique (BM25, fusion RRF) sur bases vectorielles (PostgreSQL : pgvector + ParadeDB).
+    \item Benchmark d'outils d'extraction de données (Docling, PyMuPDF, OCR, VLM) et conception de protocoles d'évaluation quantitative rigoureux sur benchmark académique (RAGAS, recall@k, MRR, bootstrap).
+    \item Développement d'un service de traitement documentaire à grande échelle : API backend conteneurisée (Docker), CI/CD, déploiement en production.
   \end{itemize}
 }
 
 \cvexp{Stagiaire Assistante Ingénieure R\&D}{Yooz}{Aimargues, France}{Avril 2025 -- Août 2025 (4 mois)}{%
   \begin{itemize}[leftmargin=12pt, itemsep=2pt, topsep=0pt, partopsep=0pt, parsep=0pt]
-    \item Entraînement et comparaison de modèles de classification supervisée (Random Forest, XGBoost) pour l'affectation automatique de comptes comptables à partir de factures.
-    \item Clustering et réduction de dimension (PCA, t-SNE, UMAP) de l'espace vectoriel pour auditer et diagnostiquer les erreurs d'un système de recherche sémantique en production.
-    \item Conception d'un système RAG indexé sur le Plan Comptable Général et étude comparative quantifiée face à une approche LLM pur (81\% vs 64\% de correspondance), pour orienter le choix de solution selon le profil client.
+    \item Analyse d'un jeu de données réel (4509 documents, 11508 lignes) : application web (Dash, Plotly) de visualisation pour catégoriser les erreurs d'un moteur de recherche sémantique (Milvus).
+    \item Entraînement et comparaison de modèles de classification ML (XGBoost, meilleurs résultats) à partir de caractéristiques extraites des données, pour réduire les faux positifs.
+    \item Système de traitement automatique de texte (RAG) pour la classification de données non annotées, avec mesure quantifiée de la performance (81\% de précision).
   \end{itemize}
 }
 
@@ -157,15 +157,13 @@ Ingénieure diplômée de l'IMT Mines Albi (Data \& Systèmes d'Information), av
 
 \cvedu{IMT Mines Albi}{Ingénieur Généraliste}{Albi, France}{2023 -- 2026}{Optimisation, Base de données, Calcul numérique, Big Data, Machine Learning.}
 
-\cveduplain{Lycée Joffre}{Classe préparatoire MPSI-MP}{Montpellier, France}{2021 -- 2023}
+\cvedu{Lycée Joffre}{Classe préparatoire MPSI-MP}{Montpellier, France}{2021 -- 2023}{Mathématiques, physique (mécanique, ondes), sciences de l'ingénieur.}
 
 % ---------- PROJETS ----------
 \section*{Projets}
 \sectionrule
 
-\cvproject{Prévision en temps réel du temps d'attente à quai de la SNCF}{2025}{Nettoyage, traitement et agrégation des données de flux. Entraînement de modèles de régression et de séries temporelles en Python.}
-
-\cvproject{Base de données d'un réseau social}{2023}{Modélisation d'un schéma relationnel (MCD, MRD, diagramme de dépendance) et implémentation SQL du schéma et des requêtes d'interaction.}
+\cvproject{Prévision en temps réel du temps d'attente à quai de la SNCF}{2025}{Nettoyage, traitement et agrégation de données temporelles de flux. Entraînement de modèles de régression et de séries temporelles en Python.}
 
 \switchcolumn
 
@@ -174,11 +172,12 @@ Ingénieure diplômée de l'IMT Mines Albi (Data \& Systèmes d'Information), av
 % ---------- COMPÉTENCES ----------
 \subsectitle{Compétences}
 
-\sidebarline{Languages}{Python (NumPy, Pandas, Scikit-learn, TensorFlow/\allowbreak PyTorch), R, SQL, C++, Matlab}
-\sidebarline{Bases de données}{SQL, PostgreSQL, pgvector, modélisation de schémas relationnels}
-\sidebarline{Machine Learning}{Régression, classification, clustering, séries temporelles, CNN, MLP}
-\sidebarline{Évaluation \& Ingénierie logicielle}{Benchmarks, protocoles de test, métriques (RAGAS, recall@k, F1), Git, Docker, FastAPI, CI/CD}
-\sidebarline{NLP / LLM}{RAG, embeddings, LlamaIndex, LangChain, LangGraph}
+\sidebarline{Langages}{Python (Pandas, NumPy, Scikit-learn, PyTorch), SQL}
+\sidebarline{Bases scientifiques}{Mécanique, physique des ondes, calcul numérique (classe préparatoire MPSI-MP)}
+\sidebarline{Traitement de données}{Pipelines de données non structurées, RAG, embeddings, recherche sémantique \& hybride}
+\sidebarline{Outils \& Infrastructure}{Docker, CI/CD, Git, architectures d'intégration}
+\sidebarline{Bases de données}{SQL, BM25 (ParadeDB), bases vectorielles (pgvector, Milvus, ChromaDB)}
+\sidebarline{Machine Learning}{Classification, clustering, réduction de dimension, CNN, séries temporelles}
 
 % ---------- LANGUES ----------
 \subsectitle{Langues}

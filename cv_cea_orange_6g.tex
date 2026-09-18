@@ -31,7 +31,7 @@
   {\color{accent}\bfseries\Large}
   {}{0em}{}
 \titlespacing{\section}{0pt}{6pt}{3pt}
-\newcommand{\sectionrule}{\vspace{-6pt}{\color{accent}\hrule height 1pt}\vspace{5pt}}
+\newcommand{\sectionrule}{\vspace{-6pt}{\color{accent}\hrule height 1pt}\vspace{3pt}}
 
 % ---------- Sidebar section titles ----------
 \newcommand{\subsectitle}[1]{%
@@ -49,7 +49,7 @@
   \noindent\textbf{#1} \hfill {\itshape\color{graytext}\small #4}\\
   {\itshape #2 --- #3}\\[-2pt]
   #5
-  \vspace{7pt}
+  \vspace{4pt}
 }
 
 % Education entry: #1 school #2 area/degree #3 location #4 period #5 description
@@ -57,14 +57,14 @@
   \noindent\textbf{#1} \hfill {\itshape\color{graytext}\small #4}\\
   {\itshape #2, #3}\\[1pt]
   {\small #5}
-  \vspace{4pt}
+  \vspace{3pt}
 }
 
 % Education entry without description
 \newcommand{\cveduplain}[4]{%
   \noindent\textbf{#1} \hfill {\itshape\color{graytext}\small #4}\\
   {\itshape #2, #3}
-  \vspace{4pt}
+  \vspace{3pt}
 }
 
 % Project entry: #1 name #2 period #3 description
@@ -121,7 +121,7 @@
 \section*{Résumé}
 \sectionrule
 \justifying
-Ingénieure diplômée de l'IMT Mines Albi (Data \& Systèmes d'Information), avec une expérience en machine learning, bases de données relationnelles et protocoles d'évaluation rigoureux (benchmarks, métriques quantifiées). Intérêt pour la fiabilité et l'auditabilité des systèmes d'IA. En recherche d'un poste d'ingénieure de R\&D à partir de septembre 2026.
+Ingénieure diplômée de l'IMT Mines Albi (Data \& Systèmes d'Information), avec une solide formation en mathématiques appliquées et une expérience en développement d'algorithmes de machine learning, optimisation et traitement de données en Python. Rigueur expérimentale (protocoles de test reproductibles, métriques quantifiées) et intérêt pour l'application de l'IA à de nouveaux domaines techniques. En recherche d'un poste d'ingénieure-chercheuse à partir de septembre 2026.
 
 % ---------- EXPÉRIENCE ----------
 \section*{Expérience}
@@ -129,17 +129,17 @@ Ingénieure diplômée de l'IMT Mines Albi (Data \& Systèmes d'Information), av
 
 \cvexp{Stagiaire Ingénieure IA Générative}{ALTEN Lab}{Grenoble, France}{Février 2026 -- Août 2026 (6 mois)}{%
   \begin{itemize}[leftmargin=12pt, itemsep=2pt, topsep=0pt, partopsep=0pt, parsep=0pt]
-    \item Conception d'un benchmark et d'un protocole de test reproductible pour l'extraction de documents PDF industriels complexes, avec métriques quantifiées (WER, CER, NED, GriTS, précision/\allowbreak rappel/\allowbreak F1).
-    \item Pipeline d'ingestion (chunking, embeddings, PostgreSQL/\allowbreak pgvector) et deux moteurs RAG complémentaires (frameworkless, LangChain/\allowbreak LangGraph).
-    \item Évaluation complète du système (RAGAS, recall@k), API FastAPI conteneurisée (Docker), CI/CD, déploiement en production.
+    \item Conception et validation expérimentale d'algorithmes de traitement de données en Python, avec protocole de test reproductible et métriques quantifiées (WER, CER, NED, GriTS, F1).
+    \item Développement de deux architectures algorithmiques complémentaires (frameworkless, LangChain/\allowbreak LangGraph), comparées pour identifier la plus performante.
+    \item Intégration et validation du système sur une plateforme conteneurisée (API FastAPI, Docker), avec déploiement en production (CI/CD).
   \end{itemize}
 }
 
 \cvexp{Stagiaire Assistante Ingénieure R\&D}{Yooz}{Aimargues, France}{Avril 2025 -- Août 2025 (4 mois)}{%
   \begin{itemize}[leftmargin=12pt, itemsep=2pt, topsep=0pt, partopsep=0pt, parsep=0pt]
-    \item Entraînement et comparaison de modèles de classification supervisée (Random Forest, XGBoost) pour l'affectation automatique de comptes comptables à partir de factures.
-    \item Clustering et réduction de dimension (PCA, t-SNE, UMAP) de l'espace vectoriel pour auditer et diagnostiquer les erreurs d'un système de recherche sémantique en production.
-    \item Conception d'un système RAG indexé sur le Plan Comptable Général et étude comparative quantifiée face à une approche LLM pur (81\% vs 64\% de correspondance), pour orienter le choix de solution selon le profil client.
+    \item Développement et comparaison de modèles de machine learning (Random Forest, XGBoost) sur données réelles bruitées.
+    \item Analyse de l'espace vectoriel par réduction de dimension (PCA, t-SNE, UMAP) pour diagnostiquer les limites d'un système en production.
+    \item Étude comparative quantifiée de plusieurs approches algorithmiques (81\% vs 64\% de performance), pour orienter le choix de solution selon les contraintes du contexte.
   \end{itemize}
 }
 
@@ -157,15 +157,13 @@ Ingénieure diplômée de l'IMT Mines Albi (Data \& Systèmes d'Information), av
 
 \cvedu{IMT Mines Albi}{Ingénieur Généraliste}{Albi, France}{2023 -- 2026}{Optimisation, Base de données, Calcul numérique, Big Data, Machine Learning.}
 
-\cveduplain{Lycée Joffre}{Classe préparatoire MPSI-MP}{Montpellier, France}{2021 -- 2023}
+\cvedu{Lycée Joffre}{Classe préparatoire MPSI-MP}{Montpellier, France}{2021 -- 2023}{Mathématiques appliquées, physique, algorithmique.}
 
 % ---------- PROJETS ----------
 \section*{Projets}
 \sectionrule
 
-\cvproject{Prévision en temps réel du temps d'attente à quai de la SNCF}{2025}{Nettoyage, traitement et agrégation des données de flux. Entraînement de modèles de régression et de séries temporelles en Python.}
-
-\cvproject{Base de données d'un réseau social}{2023}{Modélisation d'un schéma relationnel (MCD, MRD, diagramme de dépendance) et implémentation SQL du schéma et des requêtes d'interaction.}
+\cvproject{Prévision en temps réel du temps d'attente à quai de la SNCF}{2025}{Nettoyage, traitement et agrégation de données de flux bruitées et variables. Entraînement et évaluation de modèles de régression et de séries temporelles en Python pour la prédiction en temps réel.}
 
 \switchcolumn
 
@@ -174,11 +172,10 @@ Ingénieure diplômée de l'IMT Mines Albi (Data \& Systèmes d'Information), av
 % ---------- COMPÉTENCES ----------
 \subsectitle{Compétences}
 
-\sidebarline{Languages}{Python (NumPy, Pandas, Scikit-learn, TensorFlow/\allowbreak PyTorch), R, SQL, C++, Matlab}
-\sidebarline{Bases de données}{SQL, PostgreSQL, pgvector, modélisation de schémas relationnels}
-\sidebarline{Machine Learning}{Régression, classification, clustering, séries temporelles, CNN, MLP}
-\sidebarline{Évaluation \& Ingénierie logicielle}{Benchmarks, protocoles de test, métriques (RAGAS, recall@k, F1), Git, Docker, FastAPI, CI/CD}
-\sidebarline{NLP / LLM}{RAG, embeddings, LlamaIndex, LangChain, LangGraph}
+\sidebarline{Mathématiques \& Algorithmique}{Mathématiques appliquées, optimisation, calcul numérique}
+\sidebarline{Langages}{Python (NumPy, Pandas, Scikit-learn, TensorFlow/\allowbreak PyTorch), Matlab, C++, R, SQL}
+\sidebarline{Machine Learning \& IA}{CNN, MLP, régression, séries temporelles, classification, clustering}
+\sidebarline{Outils}{Git, Docker, FastAPI, CI/CD}
 
 % ---------- LANGUES ----------
 \subsectitle{Langues}

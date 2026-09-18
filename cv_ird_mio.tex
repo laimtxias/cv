@@ -5,7 +5,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
 \usepackage{XCharter}                % elegant serif body font
-\usepackage[a4paper,margin=1.1cm]{geometry}
+\usepackage[a4paper,margin=1.0cm]{geometry}
 \usepackage{xcolor}
 \usepackage{titlesec}
 \usepackage{enumitem}
@@ -31,7 +31,7 @@
   {\color{accent}\bfseries\Large}
   {}{0em}{}
 \titlespacing{\section}{0pt}{6pt}{3pt}
-\newcommand{\sectionrule}{\vspace{-6pt}{\color{accent}\hrule height 1pt}\vspace{5pt}}
+\newcommand{\sectionrule}{\vspace{-6pt}{\color{accent}\hrule height 1pt}\vspace{4pt}}
 
 % ---------- Sidebar section titles ----------
 \newcommand{\subsectitle}[1]{%
@@ -49,7 +49,7 @@
   \noindent\textbf{#1} \hfill {\itshape\color{graytext}\small #4}\\
   {\itshape #2 --- #3}\\[-2pt]
   #5
-  \vspace{7pt}
+  \vspace{6pt}
 }
 
 % Education entry: #1 school #2 area/degree #3 location #4 period #5 description
@@ -121,7 +121,7 @@
 \section*{Résumé}
 \sectionrule
 \justifying
-Ingénieure diplômée de l'IMT Mines Albi (Data \& Systèmes d'Information), avec une expérience en machine learning, bases de données relationnelles et protocoles d'évaluation rigoureux (benchmarks, métriques quantifiées). Intérêt pour la fiabilité et l'auditabilité des systèmes d'IA. En recherche d'un poste d'ingénieure de R\&D à partir de septembre 2026.
+Ingénieure diplômée de l'IMT Mines Albi (Data \& Systèmes d'Information), avec une expérience en conception de pipelines reproductibles pour l'intégration et l'analyse de données hétérogènes, bases de données relationnelles et méthodes statistiques multivariées (réduction de dimension, machine learning). Anglais scientifique courant (C1). En recherche d'un poste d'ingénieure de recherche à partir de septembre 2026.
 
 % ---------- EXPÉRIENCE ----------
 \section*{Expérience}
@@ -129,17 +129,17 @@ Ingénieure diplômée de l'IMT Mines Albi (Data \& Systèmes d'Information), av
 
 \cvexp{Stagiaire Ingénieure IA Générative}{ALTEN Lab}{Grenoble, France}{Février 2026 -- Août 2026 (6 mois)}{%
   \begin{itemize}[leftmargin=12pt, itemsep=2pt, topsep=0pt, partopsep=0pt, parsep=0pt]
-    \item Conception d'un benchmark et d'un protocole de test reproductible pour l'extraction de documents PDF industriels complexes, avec métriques quantifiées (WER, CER, NED, GriTS, précision/\allowbreak rappel/\allowbreak F1).
-    \item Pipeline d'ingestion (chunking, embeddings, PostgreSQL/\allowbreak pgvector) et deux moteurs RAG complémentaires (frameworkless, LangChain/\allowbreak LangGraph).
-    \item Évaluation complète du système (RAGAS, recall@k), API FastAPI conteneurisée (Docker), CI/CD, déploiement en production.
+    \item Conception de pipelines reproductibles pour l'intégration de données hétérogènes (documents, images, tableaux), avec protocole de test et métriques quantifiées (WER, CER, NED, GriTS, F1).
+    \item Structuration et harmonisation de données sur base relationnelle (PostgreSQL/\allowbreak pgvector) ; développement de deux moteurs de traitement complémentaires (frameworkless, LangChain/\allowbreak LangGraph).
+    \item Documentation et diffusion des outils développés (API FastAPI conteneurisée, CI/CD), déploiement en production.
   \end{itemize}
 }
 
 \cvexp{Stagiaire Assistante Ingénieure R\&D}{Yooz}{Aimargues, France}{Avril 2025 -- Août 2025 (4 mois)}{%
   \begin{itemize}[leftmargin=12pt, itemsep=2pt, topsep=0pt, partopsep=0pt, parsep=0pt]
-    \item Entraînement et comparaison de modèles de classification supervisée (Random Forest, XGBoost) pour l'affectation automatique de comptes comptables à partir de factures.
-    \item Clustering et réduction de dimension (PCA, t-SNE, UMAP) de l'espace vectoriel pour auditer et diagnostiquer les erreurs d'un système de recherche sémantique en production.
-    \item Conception d'un système RAG indexé sur le Plan Comptable Général et étude comparative quantifiée face à une approche LLM pur (81\% vs 64\% de correspondance), pour orienter le choix de solution selon le profil client.
+    \item Développement de modèles de machine learning (Random Forest, XGBoost) et de méthodes statistiques de réduction de dimension (PCA, t-SNE, UMAP) sur données réelles hétérogènes.
+    \item Intégration de données multimodales (texte, embeddings, métadonnées) dans un système de recherche sémantique en production.
+    \item Étude comparative quantifiée de plusieurs approches méthodologiques (81\% vs 64\% de correspondance), documentée pour orienter la décision selon le contexte d'usage.
   \end{itemize}
 }
 
@@ -163,7 +163,7 @@ Ingénieure diplômée de l'IMT Mines Albi (Data \& Systèmes d'Information), av
 \section*{Projets}
 \sectionrule
 
-\cvproject{Prévision en temps réel du temps d'attente à quai de la SNCF}{2025}{Nettoyage, traitement et agrégation des données de flux. Entraînement de modèles de régression et de séries temporelles en Python.}
+\cvproject{Prévision en temps réel du temps d'attente à quai de la SNCF}{2025}{Nettoyage et modélisation de données de flux (régression, séries temporelles) en Python.}
 
 \cvproject{Base de données d'un réseau social}{2023}{Modélisation d'un schéma relationnel (MCD, MRD, diagramme de dépendance) et implémentation SQL du schéma et des requêtes d'interaction.}
 
@@ -174,11 +174,10 @@ Ingénieure diplômée de l'IMT Mines Albi (Data \& Systèmes d'Information), av
 % ---------- COMPÉTENCES ----------
 \subsectitle{Compétences}
 
-\sidebarline{Languages}{Python (NumPy, Pandas, Scikit-learn, TensorFlow/\allowbreak PyTorch), R, SQL, C++, Matlab}
-\sidebarline{Bases de données}{SQL, PostgreSQL, pgvector, modélisation de schémas relationnels}
-\sidebarline{Machine Learning}{Régression, classification, clustering, séries temporelles, CNN, MLP}
-\sidebarline{Évaluation \& Ingénierie logicielle}{Benchmarks, protocoles de test, métriques (RAGAS, recall@k, F1), Git, Docker, FastAPI, CI/CD}
-\sidebarline{NLP / LLM}{RAG, embeddings, LlamaIndex, LangChain, LangGraph}
+\sidebarline{Programmation scientifique}{Python (NumPy, Pandas, Scikit-learn, TensorFlow/\allowbreak PyTorch), R, C++, Matlab, SQL}
+\sidebarline{Bases de données}{SQL, PostgreSQL, modélisation de schémas relationnels}
+\sidebarline{Méthodes statistiques \& ML}{Réduction de dimension (PCA, t-SNE, UMAP), régression, classification, clustering, CNN, MLP}
+\sidebarline{Développement \& reproductibilité}{Git, Docker, CI/CD, FastAPI, protocoles de test reproductibles}
 
 % ---------- LANGUES ----------
 \subsectitle{Langues}
